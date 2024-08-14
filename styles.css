@@ -33,6 +33,10 @@ body {
 .nav-logo {
   height: 50px;
   width: 50px;
+  @media (min-width: 1441px) {
+  height: 80px;
+  width: 80px;
+  }
 }
 
 .hamburger-menu {
@@ -140,6 +144,11 @@ body {
   box-sizing: border-box;
 }
 
+@media (min-width:1441px){
+  .container {
+    max-width: 1900px;
+  }
+}
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -255,6 +264,20 @@ body {
   }
 }
 
+@media (min-width: 1441px) {
+  .hero {
+    padding-top: 120px;
+  }
+  .subheadline h1 {
+    font-size: 2.1rem;
+    flex-wrap: wrap;
+  }
+  
+  .logo-image {
+    max-height: 900px;
+    max-width: 900px;
+  }
+}
 /* Torchlight Effect */
 .hero::before {
   content: "";
@@ -319,7 +342,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 50px;
   width: 100%;
 }
 
@@ -338,7 +361,6 @@ body {
   flex-direction: column;
 }
 
-/* Hover Effect for Larger Screens */
 .product-box:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
@@ -352,12 +374,6 @@ body {
     gap: 30px; /* Add spacing between items */
   }
 
-  .product-box {
-    width: 90%; /* Adjust width for better responsiveness */
-    max-width: 250px; /* Limit maximum width */
-    margin-bottom: 20px; /* Space between products */
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
 
   .product-box:hover {
     transform: scale(1.05); /* Reduce scale to fit smaller screens */
@@ -415,4 +431,32 @@ body {
 
 .footer p {
   margin: 0;
+}
+
+/* Styles for Screens 1440 above */
+@media (min-width: 1441px) {
+  .product-boxes {
+    flex-direction: row; /* Stack items vertically */
+    align-items: center;
+    gap: 100px; /* Add spacing between items */
+  }
+
+  .product-box {
+    width: 280px; /* Adjust width for better responsiveness */
+    min-height:380px;
+    margin-bottom: 20px; /* Space between products */
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 10px;
+  }
+  .product-box h3 {
+    margin-bottom: 10px;
+    font-size: 25px;
+  }
+  
+  .product-box p {
+    font-size: 20px;
+  }
+  .product-box:hover {
+    transform: scale(1.1); /* Reduce scale to fit smaller screens */
+  }
 }
